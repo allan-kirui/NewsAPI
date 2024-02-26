@@ -30,3 +30,4 @@ venv3/
 
 # Access config file
 *.ini
+*.conf

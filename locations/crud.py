@@ -1,11 +1,21 @@
 from sqlalchemy.orm import Session
-from database import models
+from database.models import Location as LocationModel
 from uuid import UUID
 
 
+# CREATE
+def create_location(db: Session, name: str):
+    location = LocationModel(name=name)
+    db.add(location)
+    db.commit()
+    db.refresh(location)
+    return location
+
+
+# READ
 def get_location(db: Session, location_id: UUID):
-    return db.query(models.Location).filter(models.Location.id == location_id).first()
+    return db.query(LocationModel).filter(LocationModel.id == location_id).first()
 
 
 def get_locations(db: Session, skip: int = 0, limit: int = 10):
-    return db.query(models.Location).offset(skip).limit(limit).all()
+    return db.query(LocationModel).offset(skip).limit(limit).all()
