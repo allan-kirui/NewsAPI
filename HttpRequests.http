@@ -1,5 +1,12 @@
+### LOCATIONS
+
 GET http://localhost:8000/newsApi/locations/
 
 ###
 GET http://localhost:8000/newsApi/locations/efa3f230-75fe-4350-a47c-065df5df81c7
 
+### 
+POST http://localhost:8000/newsApi/locations/
+Content-Type: application/json
+
+{"name" : "Vegas"}
