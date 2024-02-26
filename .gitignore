@@ -1,0 +1,29 @@
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+venv3/
+*.env
+.env/
+
+# PyCharm-specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Environment variables file
+.env
