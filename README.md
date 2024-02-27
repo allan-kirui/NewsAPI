@@ -6,4 +6,4 @@ This is a brief description of your project.
 
 For detailed API documentation, check out the Swagger UI:
 
-<iframe src="docs/index.html" width="100%" height="500px"></iframe>
+[Swagger Documentation](https://api.swaggerhub.com/apis-docs/your-username/your-api-name)
