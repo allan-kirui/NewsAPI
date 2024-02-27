@@ -1,0 +1,23 @@
+## LOCATION
+### print location by id
+GET http://localhost:8000/newsApi/locations/?location_id=4e4cb425-8f01-45b4-b7cf-2f76e4bea665
+
+### list all locations
+GET http://localhost:8000/newsApi/locations/list/
+
+### insert new location
+POST http://localhost:8000/newsApi/locations/
+Content-Type: application/json
+
+{"name" : "Clark County"}
+
+### insert multiple locations
+POST http://localhost:8000/newsApi/locations/multiple/
+Content-Type: application/json
+
+{"locations": [{ "name" : "Chicago" }, { "name" : "London" }]}
+
+### delete location by id
+DELETE http://localhost:8000/newsApi/locations/5b70e804-d88d-45df-b031-3f3a4a52d991
+
+

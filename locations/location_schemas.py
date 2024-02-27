@@ -14,6 +14,11 @@ class LocationBase(BaseModel):
         }
     }
 
+
+class LocationIDDetailsResponse(LocationBase):
+    id: UUID
+
+
 class LocationCreate(LocationBase):
     pass
 
@@ -30,8 +35,7 @@ class LocationID(BaseModel):
     }
 
 
-
-class LocationList(BaseModel):
+class LocationCreateResponse(BaseModel):
     locations: List[LocationBase]
 
     model_config = {

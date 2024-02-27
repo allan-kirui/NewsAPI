@@ -1,17 +1,10 @@
-import uvicorn
-from fastapi import FastAPI, HTTPException, Depends
-from sqlalchemy import create_engine
-from sqlalchemy.orm import Session, sessionmaker, aliased
-from starlette.responses import RedirectResponse
+from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 
-from database import crud, database
-from database.models import Location, Person, News, NewsAssociation
-from locations import locations_api
 from locations.locations_api import router as location_router
+from people.people_api import router as people_router
 
-# if __name__ == "__main__":
-#     db_instance = database.Database()
-#     locations_api.read_location(0,db_instance.SessionLocal)
+
 app = FastAPI()
 
 
@@ -23,6 +16,7 @@ async def read_root():
 
 # Include routers
 app.include_router(location_router, prefix="/newsApi/locations", tags=["locations"])
+app.include_router(people_router, prefix="/newsApi/people", tags=["people"])
 
 # # Create aliases for the joined tables
 # news_alias = aliased(News, name='news_alias')

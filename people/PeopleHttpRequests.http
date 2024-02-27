@@ -1,0 +1,31 @@
+## PEOPLE
+### print person by id
+GET http://localhost:8000/newsApi/people/?person_id=1227010c-ac21-4b3c-8bb9-5649637fa6ed
+
+### list all people
+GET http://localhost:8000/newsApi/people/list/
+
+### insert new person
+POST http://localhost:8000/newsApi/people/
+Content-Type: application/json
+
+{"name" : "Rihanna",
+  "surname" : "Fenty"
+}
+
+### insert multiple people
+POST http://localhost:8000/newsApi/people/multiple/
+Content-Type: application/json
+
+{
+  "people": [
+    {
+      "name" : "Beyonce",
+      "surname" : "Knowles"
+    },
+    {
+      "name" : "Sean",
+      "surname" : "Carter"
+    }
+  ]
+}
