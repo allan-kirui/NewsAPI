@@ -3,7 +3,7 @@ name: Update Docs
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   update_docs:
