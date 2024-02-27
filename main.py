@@ -4,8 +4,24 @@ from fastapi.responses import RedirectResponse
 from locations.locations_api import router as location_router
 from people.people_api import router as people_router
 
+description = """
+NewsAPI helps you get the latest news. 🚀
+"""
 
-app = FastAPI()
+app = FastAPI(
+    title="NewsAPI",
+    description=description,
+    summary="The future is here.",
+    contact={
+        "name": "Allan Kirui",
+        "url": "https://www.linkedin.com/in/allan-kirui-bb55921b4/",
+        "email": "https://github.com/allan-kirui/",
+    },
+    license_info={
+        "name": "Creative Commons Attribution-NonCommercial 4.0 International License",
+        "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    }
+)
 
 
 # Redirect from "/" to "/newsApi"
