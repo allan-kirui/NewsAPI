@@ -1,3 +1,6 @@
+from typing import List
+from uuid import UUID
+
 from pydantic import BaseModel
 
 
@@ -10,7 +13,11 @@ class LocationCreate(LocationBase):
 
 
 class Location(LocationBase):
-    id: int
+    id: UUID
 
     class Config:
         orm_mode = True
+
+
+class LocationList(BaseModel):
+    locations: List[LocationBase]

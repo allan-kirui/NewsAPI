@@ -32,7 +32,7 @@ class Database:
         # Create the database URL
         self.DATABASE_URL = f"postgresql://{self.user}:{self.password}@{self.host}/{self.database}"
 
-        self.engine = create_engine(self.DATABASE_URL)
+        self.engine = create_engine(self.DATABASE_URL, echo=True)
         self.SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=self.engine)
 
     def get_db(self):

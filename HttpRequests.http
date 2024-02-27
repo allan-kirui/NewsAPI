@@ -10,3 +10,14 @@ POST http://localhost:8000/newsApi/locations/
 Content-Type: application/json
 
 {"name" : "Vegas"}
+
+###
+POST http://localhost:8000/newsApi/locations/multiple/
+Content-Type: application/json
+
+{"locations": [{ "name" : "Sydney" }, { "name" : "Beijing" }]}
+
+
+###
+DELETE http://localhost:8000/newsApi/locations/c1c28717-20e2-45c6-b2b6-613fd7fbc8ca
+
