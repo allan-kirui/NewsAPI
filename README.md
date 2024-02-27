@@ -6,4 +6,4 @@ This is a brief description of your project.
 
 For detailed API documentation, check out the Swagger UI:
 
-[Swagger Documentation](https://api.swaggerhub.com/apis-docs/your-username/your-api-name)
+[Swagger Documentation](https://app.swaggerhub.com/apis/ALLANKIPKEMOIKIRUI/News-api/0.1.0)
