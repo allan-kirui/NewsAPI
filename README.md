@@ -1,6 +1,4 @@
-# Your Project
-
-This is a brief description of your project.
+# NewsAPI Project
 
 ## API Documentation
 
