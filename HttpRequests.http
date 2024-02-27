@@ -1,9 +1,9 @@
 ### LOCATIONS
 
-GET http://localhost:8000/newsApi/locations/
+GET http://localhost:8000/newsApi/locations/list/
 
 ###
-GET http://localhost:8000/newsApi/locations/efa3f230-75fe-4350-a47c-065df5df81c7
+GET http://localhost:8000/newsApi/locations/?location_id=4e4cb425-8f01-45b4-b7cf-2f76e4bea665
 
 ### 
 POST http://localhost:8000/newsApi/locations/

@@ -10,15 +10,22 @@ router = APIRouter()
 
 
 # GETS
-@router.get("/{location_id}")
-async def read_location(location_id: UUID, db: Session = Depends(Database().get_db)):
-    location = locations_crud.get_location(db, location_id)
+# @router.get("/{location_id}")
+# async def read_location(location_id: UUID, db: Session = Depends(Database().get_db)):
+#     location = locations_crud.get_location(db, location_id)
+#     if location is None:
+#         raise HTTPException(status_code=404, detail="Location does not exist")
+#     return location
+
+@router.get("/")
+async def read_location(location_id: location_schemas.LocationID = Depends(), db: Session = Depends(Database().get_db)):
+    location = locations_crud.get_location(db, location_id.location_id)
     if location is None:
         raise HTTPException(status_code=404, detail="Location does not exist")
     return location
 
 
-@router.get("/")
+@router.get("/list/")
 async def read_locations(skip: int = 0, limit: int = 80, db: Session = Depends(Database().get_db)):
     locations = locations_crud.get_locations(db, skip=skip, limit=limit)
     return locations
