@@ -1,10 +1,11 @@
+#!/usr/bin/env python
 import os
 import requests
 
 # Replace 'localhost:8000' with the actual host and port of your FastAPI application
 base_url = 'http://localhost:8000'
 openapi_path = '/openapi.json'
-docs_save_path = "./"
+docs_save_path = "./docs/"
 url = base_url + openapi_path
 
 try:
